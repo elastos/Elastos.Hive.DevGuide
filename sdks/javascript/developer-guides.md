@@ -1,3 +1,0 @@
-# Developer guides
-
-Coming soon.

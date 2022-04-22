@@ -146,8 +146,6 @@ databaseService.deleteOne("your_collection", filter)
 });
 ```
 
-删除满足条件的多条数据的示例如下：
-
 Example of deleting multiple pieces of data that meet the conditions are as follows:
 
 ```java

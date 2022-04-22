@@ -1,12 +1,12 @@
 # FilesService
 
-Hive SDK uploads files to the corresponding Vault through the FileService class. File is one of the data types supported by Hive SDK. The FileService class is one of the derived sub-services in Vault Service, which is used to support the operation of file types, such as uploading, downloading, and deleting. Once the data is uploaded to Hive Node, its file block data is hosted and saved in the corresponding IPFS Node, while its metadata information is hosted in the Vault internal database.
+Hive SDK uploads files to the corresponding Vault through the FilesService class. File is one of the data types supported by Hive SDK. The FileService class is one of the derived sub-services in Vault Service, which is used to support the operation of file types, such as uploading, downloading, and deleting. Once the data is uploaded to Hive Node, its file block data is hosted and saved in the corresponding IPFS Node, while its metadata information is hosted in the Vault internal database.
 
 ## Upload File
 
 ### Upload File Data by Writing File Stream Interface Writer
 
-When uploading a file, you need to get the FileSerivce interface instance from the Vault instance, and then set the target path (REMOTE\_FILE\_PATH) to get the remote write file stream interface instance Writer. At the same time, you'll need to write the file content into the file stream. The process of writing file data is that of uploading file data.
+When uploading a file, you need to get the FilesService interface instance from the Vault instance, and then set the target path (REMOTE\_FILE\_PATH) to get the remote write file stream interface instance Writer. At the same time, you'll need to write the file content into the file stream. The process of writing file data is that of uploading file data.
 
 The whole process of uploading files using FileService instance is connected in series through the CompletableFuture mode, and a CompletableFuture object is returned that indicates whether the file upload succeeds or fails and an exception occurs.
 
@@ -39,7 +39,7 @@ filesService.getUploadWriter(YOUR_REMOTE_PATH)
 );
 ```
 
-### Upload Filta by the Output Stream Method (OutputStream)
+### Upload File by the Output Stream Method (OutputStream)
 
 When uploading a file, you can also set the directory path (REMOTE\_FILE\_PATH) through the FileService interface instance to obtain the remote output stream OutputStream, and write the file content into the input stream OutputStream instance.
 
